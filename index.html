@@ -1,49 +1,97 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="it">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Minimalist Page</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Associazione Universitaria</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <style>
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-            background-color: #f5f5f7;
-            color: #1d1d1f;
+        :root {
+            --primary-color: #b36b57;
+            --secondary-color: #8a5045;
         }
-        .navbar {
-            background: rgba(255, 255, 255, 0.8);
-            backdrop-filter: blur(10px);
+        .navbar, footer {
+            background-color: var(--primary-color) !important;
         }
-        .container {
-            max-width: 800px;
-            margin-top: 100px;
-            text-align: center;
+        .navbar a, footer p {
+            color: white !important;
+        }
+        header {
+            background-color: var(--primary-color);
+        }
+        .card {
+            border-color: var(--secondary-color);
         }
     </style>
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-light fixed-top">
-        <div class="container-fluid">
-            <a class="navbar-brand fw-bold" href="#">Brand</a>
+    <nav class="navbar navbar-expand-lg">
+        <div class="container">
+            <a class="navbar-brand" href="#">Associazione Universitaria</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
-                <ul class="navbar-nav">
-                    <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">About</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">Services</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#mission">Mission</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#eventi">Eventi</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contatti">Contatti</a></li>
                 </ul>
             </div>
         </div>
     </nav>
-    
-    <div class="container">
-        <h1 class="fw-light">Simplicity at its Best</h1>
-        <p class="lead">A clean, modern, and lightweight design inspired by Apple.</p>
-    </div>
+
+    <header class="text-white text-center py-5">
+        <h1>Benvenuti nell'Associazione Universitaria</h1>
+        <p>Un luogo per la crescita, l'apprendimento e l'innovazione</p>
+    </header>
+
+    <section id="mission" class="container py-5">
+        <h2>La nostra mission</h2>
+        <p>Promuoviamo la collaborazione tra studenti, organizziamo eventi formativi e offriamo opportunità di networking.</p>
+    </section>
+
+    <section id="eventi" class="bg-light py-5">
+        <div class="container">
+            <h2 class="text-center">Prossimi Eventi</h2>
+            <div class="row mt-4">
+                <div class="col-md-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Workshop su Startup</h5>
+                            <p class="card-text">Data: 10 Aprile 2025</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Conferenza sulle nuove tecnologie</h5>
+                            <p class="card-text">Data: 15 Maggio 2025</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Hackathon Universitario</h5>
+                            <p class="card-text">Data: 22 Giugno 2025</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contatti" class="container py-5">
+        <h2>Contattaci</h2>
+        <p>Email: info@associazioneuniversitaria.it</p>
+        <p>Telefono: +39 123 456 7890</p>
+    </section>
+
+    <footer class="text-white text-center py-3">
+        <p>&copy; 2025 Associazione Universitaria - Tutti i diritti riservati</p>
+    </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
