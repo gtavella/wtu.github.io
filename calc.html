@@ -67,7 +67,17 @@
         {
                 const $prompt = $("#form_calcola_prompt").find("input[name='prompt']") 
                 const prompt = $prompt.val()
-               alert(prompt)
+                const resp_json = await remote_chatgpt_wtu()
+                console.log(resp_json)
+        }
+
+        async function remote_chatgpt_wtu(prompt) {
+            const url = "https://welcometounical.it/chatgpt/"
+            const qstr = "?prompt=" + prompt
+            const url_finale = url + qstr
+            const response = await fetch(url_finale)
+            const resp_json = await response.json()
+            return resp_json
         }
         
     </script>
