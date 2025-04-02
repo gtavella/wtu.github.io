@@ -17,6 +17,7 @@
         <!--  RIGA: FORM    -->
         <div class="row  mb-3">
            <form
+                   id="form_calcola_prompt"
                    onsubmit="event.preventDefault(); azione_quando_submit_form_calcola_prompt();">
               <div class="col-12 mb-3">
                    <label class="form-label">Prompt</label>
@@ -63,9 +64,11 @@
         $(document).ready(main)
 
         async function azione_quando_submit_form_calcola_prompt() 
-            {
-                alert("funziona")
-            }
+        {
+                const $prompt = $("#form_calcola_prompt").find("input[name='prompt']") 
+                const prompt = $prompt.val()
+               alert(prompt)
+        }
         
     </script>
   
