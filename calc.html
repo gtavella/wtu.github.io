@@ -68,7 +68,9 @@
                 const $prompt = $("#form_calcola_prompt").find("input[name='prompt']") 
                 const prompt = $prompt.val()
                 const resp_json = await remote_chatgpt_wtu(prompt)
-                console.log(resp_json)
+                const risposta_testo_di_chatgpt = resp_json.choices[0].message.content
+
+                riempi_spiegazione(risposta_testo_di_chatgpt)
         }
 
         async function remote_chatgpt_wtu(prompt) {
@@ -78,6 +80,11 @@
             const response = await fetch(url_finale)
             const resp_json = await response.json()
             return resp_json
+        }
+
+        function riempi_spiegazione(testo) {
+            const $el = $("#spiegazione")
+            $el.html(testo)
         }
         
     </script>
