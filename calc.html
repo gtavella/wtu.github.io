@@ -67,6 +67,9 @@
         {
                 const $prompt = $("#form_calcola_prompt").find("input[name='prompt']") 
                 const prompt = $prompt.val()
+            
+                riempi_spiegazione("calcolando...")
+            
                 const resp_json = await remote_chatgpt_wtu(prompt)
                 const risposta_testo_di_chatgpt = resp_json.choices[0].message.content
 
